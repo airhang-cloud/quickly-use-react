@@ -1,0 +1,35 @@
+.title-sty{
+    cursor: pointer;
+    position: relative;
+    width: 500px;
+}
+
+.title-sty::after{
+    position: absolute;
+    content: "";
+    width: 45px;
+    height: 6px;
+    background:#2081FF;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 16px;
+}
+
+.btn-pri{
+    width: auto;
+    box-sizing: border-box;
+    padding: 8px 16px;
+    background: #2081FF;
+    border: none;
+    border-radius: 16px;
+    color: #FFF;
+    font-size: 12px;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all .2s;
+}
+
+.btn-pri:hover{
+    transform: scale(1.1);
+}

@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+// import Home from  './Components/Home'
+import { HomeHock } from './Components/HomeHock';
+import Count from './Components/Count';
+import { useSelector } from 'react-redux';
 function App() {
+  const count = useSelector(state => state.counter.value)
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{ count }</h1>
+      <HomeHock list={[2,3,6]} />
+      <Count/>
     </div>
   );
 }
